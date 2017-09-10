@@ -52,5 +52,7 @@ class App(Application):
 
     def render(self):
         glDrawArrays(GL_TRIANGLES, 0, 3)
+
+    def after_render(self):
         glfw.poll_events()
         glfw.swap_buffers(self.window)
